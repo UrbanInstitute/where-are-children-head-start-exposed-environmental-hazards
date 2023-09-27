@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>Environmental Justice</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N0EZ8ZMM8T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N0EZ8ZMM8T',{
+            'send_page_view': false
+        });
+    </script>
+
+</head>
+
+<body>
+<div id = "isMobile"></div>
+<div id = "screen"></div>
+<div id = "contentContainer">
+    <div id = "factor">
+        <div id="selectFactor">
+            Explore the Head Start Environmental Exposure Mapping Tool
+        </div>
+        <div id="factorChoose">
+            <div class="dropdown" id="dropdown-risk">
+                <div class="dropbtn" id="dropbtn-risk"></div>
+                <div id="risk-options" class="dropdown-content"></div>
+            </div>
+            <div id="factorDetails">
+        </div>
+        </div>
+    </div>
+
+    <div id = "selectMap">
+        <div id="selectMapTitle">
+        </div>
+        <div id="mapButtons">
+        </div>
+        </div>
+    </div>
+
+    <div id = "mapContainer">
+        <div id="map"></div>
+        <div id="legend"></div>
+    </div>
+    <!-- <div class = "noHover nhWalk mobile">Select a neighborhood to learn more about its walkability in regards to <span class = "inline-layerName">equity</span></div>
+    <div class = "noHover nhEq mobile">Select a neighborhood to learn more about who lives in that community</div> -->
+
+    <div id = "sidebar">
+        <!-- <div class = "noHover nhWalk desktop">Select a neighborhood to learn more about its walkability in regards to <span class = "inline-layerName">equity</span></div>
+    <div class = "noHover nhEq desktop">Select a neighborhood to learn more about who lives in that community</div> -->
+
+        <div id = "hoverSidebar">
+            <div class = "closeMobileTT">
+                <img src = "img/icon-close.svg">
+            </div>
+            <div id = "sideScore">
+                <div id = "sidebarTop">
+                    <div id = "title-layerName"></div>
+                    <div id = 'countyName'></div>
+                    <div id = "tractName"></div>
+                    <div id = "activeScore"></div>
+                    <!-- <div id = "naText">No available data</div> -->
+                </div>
+                <div id = 'mobile-tooltip'></div>
+                <div id = 'score-details'>
+                    <div id="hs-score"></div>
+                    <div id="er-score"></div>
+                </div>
+                <div class="clearNeighborhood"><span>Clear selection</span></div>
+            </div>
+            <div id = "sideDetails">
+                <div id= "call-to-action"></div>
+                <div id="drawers">
+                    <div class="drawer" id="drawer-scores">
+                        <div id='drawer-scores-title' class="drawer-title checked">
+                            Other Scores for This Area
+                        </div>
+                        <div id='drawer-scores-graph' class="drawer-data show-drawer-data"></div>
+                    </div>
+                    <div class="drawer" id="drawer-population">
+                        <div id='drawer-population-title' class="drawer-title">
+                            Area Population by Race and Ethnicity
+                        </div>
+                        <div id='drawer-population-graph' class="drawer-data"></div>
+                    </div>
+                </div>
+                <!-- <div id = "otherLabel"></div>
+                <div id = "charts"></div> -->
+            </div>
+            
+        </div>
+    </div>
+    <div class="clearNeighborhood-mobile"><span>Clear selection</span></div>
+    <div class="note"><span>Notes: </span>ZCTA = ZIP <b>c</b>ode <b>t</b>abulation <b>a</b>rea. For Head Start, we display ZCTA, block group, and census tract–level data.<br><sup>a</sup>"No data available" includes areas without Head Start providers or areas where there are no environmental or climate data available for the selected geography.</div>
+</div>
+
+<script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+<script src = "js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+mapshaper source_shapes/zip-code-tabulation-area.json -simplify visvalingam 8% -o force source_shapes/zip-code-tabulation-area-simple.json

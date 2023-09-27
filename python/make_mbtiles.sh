@@ -1,0 +1,3 @@
+# tippecanoe --maximum-zoom=10 --minimum-zoom=4 --output=mbtiles_output/zctas-minimum-zoom.mbtiles --force --generate-ids geojson_output/zcta.geojson
+tippecanoe --maximum-zoom=11 --minimum-zoom=8 --output=mbtiles_output/block-groups.mbtiles --force --generate-ids geojson_output/block-groups.geojson
+tippecanoe --maximum-zoom=11 --minimum-zoom=8 --output=mbtiles_output/tracts.mbtiles --force --generate-ids geojson_output/tracts.geojson
